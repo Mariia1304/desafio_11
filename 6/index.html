@@ -18,15 +18,72 @@ lo gatilla y así se prevenga solo ese evento y no todos los eventos.
 Para la solución puedes inspirarte en: https://codepen.io/gabrieleromanato/pen/BdjBWd
 
 -->
-
-
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html dir="ltr" lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+        </title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <style>
+            #gallery {
+  margin: 2em auto;
+  max-width: 38%;
+  display: flex;
+}
 
-  </body>
+#gallery figure {
+  margin: 0 1.5%;
+  width: 30.33333%;
+}
+
+#gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+#gallery figcaption {
+   margin: 1em 0;
+  text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <div id="gallery">
+            <figure>
+                <img alt="" src="http://lorempixel.com/400/200/animals/">
+                    <figcaption>
+                    </figcaption>
+                </img>
+            </figure>
+            <figure>
+                <img alt="" src="http://lorempixel.com/400/200/city/">
+                    <figcaption>
+                    </figcaption>
+                </img>
+            </figure>
+            <figure>
+                <img alt="" src="http://lorempixel.com/400/200/people/">
+                    <figcaption>
+                    </figcaption>
+                </img>
+            </figure>
+        </div>
+        <script>
+            $(function() {
+    $( "img", "#gallery" ).on( "contextmenu", function( e ) {
+        e.preventDefault();
+        
+        
+    });
+    $( "img", "#gallery" ).on("contextmenu", function ( e ) {
+    alert("alerta sobre derecho de autor");
+    })
+    
+});
+        </script>
+    </body>
 </html>
